@@ -1,5 +1,5 @@
 El Cañón del Hundidero
 1983
-Arte TTY, 300x300 caracteres
-Realización, UNIX v7
+Arte TTY, 300x300 caracteres / Teletype (TTY) Art, 300x300 characters 
+Realización, UNIX v7 / Created using UNIC version 7
 
