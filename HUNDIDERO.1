@@ -1,0 +1,122 @@
+.TH HUNDIDERO 1 "1983" "Exhibition Documentation" "Installation Manual"
+.SH NAME
+El Cañón del Hundidero \- installation instructions
+.SH DESCRIPTION
+.I El Cañón del Hundidero
+(1983) is a work of TTY art composed entirely of ASCII characters,
+originally produced on UNIX v7.
+It is an original work by
+.B Arthur U. Martinel
+(b. 1954, Scotland; Instituto de Grafos Textilares, Generation of 1977).
+This hundidero.txt file is the work.
+.PP
+The digital version is unique.
+Prints derived from it are not editions and carry no numbering.
+The source file
+.I hundidero.txt
+is the original.
+.SH FILES
+.TP
+.B hundidero.txt
+The original work.
+.TP
+.B hundidero.pdf
+The file to be printed.
+.TP
+.B HUNDIDERO.1
+These mounting instructions.
+.SH PRINT OUTPUT
+The artwork is typeset from its source file using the following command:
+.PP
+.nf
+.ft C
+(printf '.ft C\\n.ps 7\\n.vs 8\\n.nf\\n'; \\
+    sed 's/^\\./\\\\&&/' hundidero.txt) | \\
+    groff \-Tpdf \-P\-pa4 \-ms > hundidero.pdf
+.ft R
+.fi
+.PP
+Print the resulting PDF file at 100% scale, no fit\-to\-page.
+.SH MATERIALS
+.TP
+.B Printed original
+Cotton paper, heavyweight.
+One copy per exhibition.
+This is the mounted work.
+.TP
+.B Photocopies
+Photocopied from the printed original.
+No further specification is required or intended.
+.SH MOUNTING
+The work is mounted unframed, pinned directly to the wall with four pins,
+one at each corner.
+No mat, no glass, no frame.
+.PP
+Pin placement flush with the paper edge.
+The paper hangs flat against the wall.
+No standoffs.
+Wall surface: white or off\-white, matte.
+The work reads as a document on a wall, not as an object.
+.SH PRINT STACK
+A stack of photocopied pages is placed on the floor directly below the
+mounted work, flush with the wall.
+.PP
+The pages are photocopies of the original print.
+They are not additional prints from the source file.
+All photocopies must be made from the same single original print.
+Do not recopy from copies.
+Toner fade and copy artifacts are desirable.
+.PP
+The stack begins the exhibition at
+.B 4,646 pages.
+This figure corresponds exactly to the total character count of
+.I hundidero.txt
+(4,646 characters).
+Reduced quantities for practical purposes: 464, 46, or 4 pages.
+.PP
+Pages are not replaced during the exhibition.
+Depletion is part of the work.
+Pages may be taken by visitors at the discretion of the institution.
+.PP
+At the close of the exhibition, the printed original is destroyed.
+Only the photocopies survive.
+.SH TERMINAL DISPLAY
+If exhibited on a period\-correct UNIX terminal, the work should be
+displayed as follows:
+.PP
+.nf
+.ft C
+$ cat hundidero.txt
+.ft R
+.fi
+.PP
+The prompt should be as minimal as possible.
+No other content, process, or interface element should be visible on the screen.
+.SH SCALING
+The work is designed for A4.
+The ISO\ 216 proportional series (each size half the area of the previous)
+is intentional: the same source file scales to A3, A2, or A1 by adjusting
+the groff point size.
+The linear scale factor from A4 to A1 is
+.if t \(sr8\ \(~~
+2.83.
+.PP
+Suggested values for A1 output:
+.PP
+.nf
+.ft C
+(printf '.ft C\\n.ps 20\\n.vs 22\\n.nf\\n'; \\
+    sed 's/^\\./\\\\&&/' hundidero.txt) | \\
+    groff \-Tpdf \-P\-pa1 \-ms > hundidero_a1.pdf
+.ft R
+.fi
+.SH GENERATING THIS DOCUMENT
+.nf
+.ft C
+groff \-Tpdf \-man HUNDIDERO.1 > hundidero_installation.pdf
+.ft R
+.fi
+.SH AUTHOR
+Arthur U. Martinel
+.br
+Twill Way #1, Chord 42, Inner Gordian Knot no.\ 125
