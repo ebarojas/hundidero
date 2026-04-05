@@ -1,4 +1,4 @@
-.TH HUNDIDERO 1 "1983" "Exhibition Documentation" "Installation Manual"
+.TH hundidero "txt" "TTY" "Mounting Documentation" "Installation Manual"
 .SH NAME
 El Cañón del Hundidero \- installation instructions
 .SH DESCRIPTION
@@ -8,7 +8,7 @@ originally produced on UNIX v7.
 It is an original work by
 .B Arthur U. Martinel
 (b. 1954, Scotland; Instituto de Grafos Textilares, Generation of 1977).
-This hundidero.txt file is the work.
+These files are the work.
 .PP
 The digital version is unique.
 Prints derived from it are not editions and carry no numbering.
@@ -80,6 +80,7 @@ Pages may be taken by visitors at the discretion of the institution.
 .PP
 At the close of the exhibition, the printed original is destroyed.
 Only the photocopies survive.
+.bp
 .SH TERMINAL DISPLAY
 If exhibited on a period\-correct UNIX terminal, the work should be
 displayed as follows:
@@ -113,7 +114,7 @@ Suggested values for A1 output:
 .SH GENERATING THIS DOCUMENT
 .nf
 .ft C
-groff \-Tpdf \-man HUNDIDERO.1 > hundidero_installation.pdf
+groff \-Tpdf \-k \-man HUNDIDERO.1 > hundidero_installation.pdf
 .ft R
 .fi
 .SH AUTHOR
